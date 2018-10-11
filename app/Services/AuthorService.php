@@ -46,4 +46,12 @@ class AuthorService
         return $this->performRequest('GET', "/authors/{$author}");
     }
 
+    /**
+     * Edit a single author from the authors service
+     * @return string
+     */
+    public function editAuthor($data, $author)
+    {
+        return $this->performRequest('PUT', "/authors/{$author}", $data);
+    }
 }
